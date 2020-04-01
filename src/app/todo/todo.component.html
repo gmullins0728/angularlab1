@@ -11,7 +11,9 @@
         <button mat-stroked-button color="primary">Complete</button>
         {{todo.task}}
         <!-- {{todo.completed ? '&#10003;' : '&#10005;'}} -->
-        <!-- <span *ngIf="true" class ="strike">{{todo.completed}} -->
+        <!-- <span *ngIf= {{todo.completed}} === true class ="strike"> -->
+    <!-- <button *ngIf = "!tasks.completed" class="complete">Completed</button>
+    <p [ngClass]=" {completedTask: tasks.completed }">{{todo.task}} -->
         </div>
 </ng-container>
 
@@ -19,4 +21,5 @@
 
 <button class="addButton">Add</button>
 </div>
+
 
