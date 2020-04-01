@@ -8,18 +8,14 @@
     <div *ngFor = "let todo of todos; let i = index">
         <button class="deleteButton" style ="float: right">X</button>
         {{i+1}}. 
-        <button mat-stroked-button color="primary">Complete</button>
+        <button mat-stroked-button color="primary" *ngIf="!todo.completed">Complete</button>
         {{todo.task}}
-        <!-- {{todo.completed ? '&#10003;' : '&#10005;'}} -->
-        <!-- <span *ngIf= {{todo.completed}} === true class ="strike"> -->
-    <!-- <button *ngIf = "!tasks.completed" class="complete">Completed</button>
-    <p [ngClass]=" {completedTask: tasks.completed }">{{todo.task}} -->
-        </div>
+        {{todo.completed}}
+    </div>
 </ng-container>
 
 <input type="text" placeholder="Add your to-do">
 
 <button class="addButton">Add</button>
 </div>
-
 
