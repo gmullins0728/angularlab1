@@ -9,8 +9,8 @@
         <button class="deleteButton" style ="float: right">X</button>
         {{i+1}}. 
         <button mat-stroked-button color="primary" *ngIf="!todo.completed">Complete</button>
+        <span *ngIf = "todo.completed" class="strike">{{todo.task}}</span>
         {{todo.task}}
-        {{todo.completed}}
     </div>
 </ng-container>
 
