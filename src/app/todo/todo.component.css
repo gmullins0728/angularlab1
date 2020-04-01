@@ -1,0 +1,49 @@
+.form {
+    margin: auto;
+    margin-top: 20px;
+    width: 75%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.todolist {
+    padding: 10px;
+    margin: auto;
+}
+
+input {
+    width: 100%;
+    height: 25px;
+    font-size: 20px;
+    color: #bbb;
+}
+
+.deleteButton {
+    background-color: transparent;
+    border: none;
+}
+
+.addButton {
+    width: 100%;
+    margin: auto;
+    background-color: #ff69b4;
+    padding: 5px;
+    border-radius: 5px;
+    color: #eee;
+    font-size: 20px;
+}
+
+.mat-stroked-button {
+    color: #ff1493;
+    border: 1px solid #ff1493;
+    line-height: 10px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+}
+
+/* .strike{
+    text-decoration: line-through;
+} */
+
