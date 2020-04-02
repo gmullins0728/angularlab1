@@ -19,6 +19,10 @@ export class TodoComponent implements OnInit {
     { task: 'play video games', completed: true }
   ];
 
+  // display Todos = (e) => {
+  //   console.log('e', e);
+  //   console.log('Hi Todos');
+  // }
   constructor() { }
 
   ngOnInit(): void {

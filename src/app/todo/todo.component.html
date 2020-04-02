@@ -1,21 +1,45 @@
-<div class="form">
-    <h1>{{title}}</h1>
-    <p>{{pTag}}</p>
 
-<input type="text" placeholder="Filter your to-dos">
+<main>
+    <section>
+        <h1>{{title}}</h1>
+        <p>{{pTag}}</p>
+
+    <input type="text" placeholder="Filter your to-dos">
 
 <ng-container class= "todolist">
     <div *ngFor = "let todo of todos; let i = index">
         <button class="deleteButton" style ="float: right">X</button>
         {{i+1}}. 
         <button mat-stroked-button color="primary" *ngIf="!todo.completed">Complete</button>
-        <span *ngIf = "todo.completed" class="strike">{{todo.task}}</span>
-        {{todo.task}}
+        <span [ngClass] = "{completed: todo.completed}">{{todo.task}}</span>
     </div>
 </ng-container>
 
-<input type="text" placeholder="Add your to-do">
+    <input type="text" placeholder="Add your to-do">
 
-<button class="addButton">Add</button>
-</div>
+    <button class="addButton">Add</button>
+    </section>
+</main>
 
+<!-- <main>
+    <section>
+        <h1>TODO List</h1>
+        <p>A place to store your todos</p>
+        <form action = "">
+            <input [(ngModel)]="showWhatUserTypes" type ="text" name="filter" placeholder="Filter your todos"/>
+        </form>
+        <h1>{{showWhatUserTypes}}</h1>
+    <ol>
+        <li *ngFor="let item of todos; index as i">
+            <div class = "item-container">
+                <button *ngIf="!item.completed">Complete</button>
+                <p [ngClass] = "{completed: item.completed}">{{ item.task }} </p>
+                <button (click)="displayTodos($event)">X</button>
+            </div> 
+        </li>
+    </ol>
+    <form action="">
+        <input type ="text" name ="todo" placeholder ="Add your todo"/>
+        <button class="add">Add</button>
+    </section>
+</main>-->
